@@ -85,10 +85,11 @@ h6 {
   overflow-y: auto;
 }
 
+
 #header .profile img {
   margin: 15px auto;
   display: block;
-  width: 120px;
+  width: 150px;
   border: 8px solid #2c2f3f;
 }
 
@@ -231,8 +232,12 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/diplome.jpg") top center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  
 }
 
 #hero:before {

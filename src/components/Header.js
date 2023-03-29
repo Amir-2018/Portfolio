@@ -1,4 +1,4 @@
-import portfolio_1 from '../assets/img/profile-img.jpg'
+import portfolio_1 from '../assets/img/pef1.jpg'
 function fn(){
     document.querySelector("#header").classList.toggle("animm") ; 
   }

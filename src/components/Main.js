@@ -1,4 +1,4 @@
-import  profile  from "../assets/img/profile-img.jpg";
+import  profile  from "../assets/img/amir.jpg";
 const Main = () => {
     return ( 
         <div>
@@ -21,7 +21,7 @@ const Main = () => {
 
                         <div class="row">
                             <div class="col-lg-4" >
-                            <img src={profile} class="img-fluid" alt=""/>
+                            <img src="" class="img-fluid" alt=""/>
                         </div>
                         <div class="col-lg-8 pt-4 pt-lg-0 content" >
                             <h3>Software engeneer &amp; Web Developer.</h3>
