@@ -588,6 +588,14 @@ section {
 .animm{
   transform: translate(100%);
 }
+@media (min-width: 1198px) {
+  #header{
+  transform: translate(-100%);
+  transform: translate(0%);
+  }
+  
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio

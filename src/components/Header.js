@@ -1,14 +1,11 @@
 import portfolio_1 from '../assets/img/pef1.jpg'
-function fn(){
-    document.querySelector("#header").classList.toggle("animm") ; 
-  }
+
 const Header = () => {
     return ( 
     
 
       
         <header id="header">
-        <i class="bi bi-list mobile-nav-toggle d-xl-none" onClick={fn}></i>
 
 
           <div class="d-flex flex-column">

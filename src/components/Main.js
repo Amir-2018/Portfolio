@@ -1,7 +1,12 @@
 import  profile  from "../assets/img/amir.jpg";
+function fn(){
+  document.querySelector("#header").classList.toggle("animm") ; 
+  
+}
 const Main = () => {
     return ( 
         <div>
+        <i class="bi bi-list mobile-nav-toggle d-xl-none" onClick={fn}></i>
 
             <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
                     <div class="hero-container" >
