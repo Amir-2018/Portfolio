@@ -454,6 +454,8 @@ section {
   display: block;
   background: none;
   border-radius: 0;
+  transition: .2s;
+  
 }
 
 .skills .progress .skill {
@@ -464,6 +466,12 @@ section {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #050d18;
+  padding: 5px;
+  border: 2px solid #173b6c;
+  cursor: pointer;
+}
+.progress:hover{
+  transform: scale(1.1);
 }
 
 .skills .progress .skill .val {
@@ -595,8 +603,28 @@ section {
   }
   
 }
+/*.progress{
+  border: 1px solid black;
 
+}*/
 
+.col-lg-3{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  
+}
+.skill{
+  width: 30%;
+  height: 100%;
+  position: relative;
+  left: 95px;
+}
+.skill>img{
+  width: 100%;
+  height: 100%;
+}
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/

@@ -1,4 +1,18 @@
 import  profile  from "../assets/img/amir.jpg";
+import  html  from "../assets/img/skills/html-5.png";
+import  js  from "../assets/img/skills/java-script.png";
+import  boos  from "../assets/img/skills/bootstrap.png";  
+import  css  from "../assets/img/skills/css-3.png";
+import  nodejs  from "../assets/img/skills/nodejs.png";
+import  science  from "../assets/img/skills/science.png";
+import  physics  from "../assets/img/skills/physics.png";
+import  git  from "../assets/img/skills/git.png";
+import  github  from "../assets/img/skills/github.png";
+
+
+
+
+
 function fn(){
   document.querySelector("#header").classList.toggle("animm") ; 
   
@@ -67,57 +81,73 @@ const Main = () => {
         
         </div>
 
-        <div class="row skills-content">
+        <div class="row skills-content d-flex justify-content-center ">
 
-          <div class="col-lg-6" >
+          <div class="col-lg-3 " >
 
             <div class="progress">
-              <span class="skill">HTML <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-barHTML" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+             <div className="skill">
+                <img src={html} alt="HTML"></img>
+             </div>
             </div>
 
             <div class="progress">
-              <span class="skill">CSS <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-barCSS" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div className="skill">
+                <img src={js} alt="HTML"></img>
+             </div>
             </div>
 
             <div class="progress">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-barJS" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div className="skill">
+                <img src={boos} alt="HTML"></img>
+             </div>
             </div>
 
           </div>
 
-          <div class="col-lg-6" >
+          <div class="col-lg-3" >
 
             <div class="progress">
-              <span class="skill">Express <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-barExpress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div className="skill">
+                <img src={css} alt="HTML"></img>
+             </div>
             </div>
 
             <div class="progress">
-              <span class="skill">MongoDB <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-barMongo" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div className="skill">
+                <img src={nodejs} alt="HTML"></img>
+             </div>
             </div>
 
             <div class="progress">
-              <span class="skill">Reactjs <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-barReact" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div className="skill">
+                <img src={science} alt="HTML"></img>
+             </div>
             </div>
 
           </div>
+            <div class="col-lg-3" >
+
+              <div class="progress">
+              <div className="skill">
+                <img src={physics} alt="HTML"></img>
+             </div>
+              </div>
+
+              <div class="progress">
+              <div className="skill">
+                <img src={git} alt="HTML"></img>
+             </div>
+              </div>
+
+              <div class="progress">
+              <div className="skill">
+                <img src={github} alt="HTML"></img>
+             </div>
+              </div>
+
+          </div>
+          
 
         </div>
 
