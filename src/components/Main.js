@@ -40,7 +40,7 @@ const Main = () => {
 
                         <div class="row">
                             <div class="col-lg-4" >
-                            <img src="" class="img-fluid" alt=""/>
+                            <img src={profile} class="img-fluid" alt=""/>
                         </div>
                         <div class="col-lg-8 pt-4 pt-lg-0 content" >
                             <h3>Software engeneer &amp; Web Developer.</h3>
@@ -179,39 +179,34 @@ const Main = () => {
             <div class="resume-item">
               <h4>Master of Fine Arts &amp; Graphic Design</h4>
               <h5>2018 - 2019</h5>
-              <p><em> Baccalaureate in Experimental Science</em></p>
+              {/* <p><em> Baccalaureate in Experimental Science</em></p> */}
             </div>
 
 
             <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2019 - 2020</h5>
-              <p><em>1st year fundamental license in computer science (LFI)</em></p>
-            </div>
-
-            <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2020 - 2021</h5>
-              <p><em>2nd year fundamental license in computer science (LFI)</em></p>
-            </div>
-
-            <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+              <h4>Bachelor of Science in Computer Science - Fundamental License</h4>
               <h5>2021 - 2022</h5>
-              <p><em>3rd year fundamental license in computer science (LFI)</em></p>
+              {/* <p><em>1st year fundamental license in computer science (LFI)</em></p> */}
             </div>
 
             <div class="resume-item">
+              <h4>studying as a student in software engineering</h4>
+              <h5>2022 - 2023</h5>
+            </div>
+
+      
+
+            {/* <div class="resume-item">
               <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
               <h5>2022 - 2023</h5>
               <p><em>computer engineering in web and multimedia technology</em></p>
-            </div>
+            </div> */}
 
-            <div class="resume-item">
+            {/* <div class="resume-item">
               <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
               <h5>2023 - 2024</h5>
               <p><em>software engineering</em></p>
-            </div>
+            </div> */}
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
@@ -300,6 +295,15 @@ const Main = () => {
                         Our online doctor-finding project is designed to simplify the process of connecting patients with healthcare providers. With our platform, patients can easily search for and book appointments with doctors based on their specialties, ratings, and availability              
                     </p> 
                 
+                </div>
+
+                <div class="resume-item">
+                <h4>Library management</h4>
+                <h5>2023</h5>
+                <h3>ISIMS</h3>
+                
+                <p>
+                This project aims to manage the library of ISIMS University, by facilitating the borrowing of books by students and overseeing the entire process until the books are returned. The system will keep track of which books are available, which students have borrowed them, and when they are due to be returned.                </p> 
                 </div>
             </div>
         </div>
