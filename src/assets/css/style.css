@@ -84,13 +84,30 @@ h6 {
   background: #040b14;
   overflow-y: auto;
 }
-
+.profile{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  top: 20px;
+  
+}
 
 #header .profile img {
-  margin: 15px auto;
+  /* margin: 15px auto;
   display: block;
   width: 150px;
-  border: 8px solid #2c2f3f;
+  border: 8px solid #2c2f3f; */
+  width: 150px;
+  height: 150px ;
+  border: 2px solid white;
+  top: 50px;
+  background-image: url("../img/amir.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
 }
 
 #header .profile h1 {
@@ -150,12 +167,16 @@ h6 {
 /* Desktop Navigation */
 .nav-menu {
   padding: 30px 0 0 0;
+  position: relative;
+ 
 }
 
 .nav-menu * {
   margin: 0;
   padding: 0;
   list-style: none;
+  position: relative;
+  margin-top: 5px;
 }
 
 .nav-menu>ul>li {
@@ -168,7 +189,7 @@ h6 {
   display: flex;
   align-items: center;
   color: #a8a9b4;
-  padding: 12px 15px;
+  padding: 9px 15px;
   margin-bottom: 8px;
   transition: 0.3s;
   font-size: 15px;
@@ -223,6 +244,7 @@ h6 {
 }
 
 .mobile-nav-active #header {
+  overflow: hidden;
   left: 0;
 }
 

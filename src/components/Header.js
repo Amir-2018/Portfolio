@@ -14,7 +14,7 @@ const Header = () => {
           <div class="d-flex flex-column">
       
             <div class="profile">
-              <img src={portfolio_1} alt="" class="img-fluid rounded-circle"/>
+              <img src="{portfolio_1}" alt="" class="img-fluid rounded-circle"/>
               <h1 class="text-light"><a href='../../public/index.html'>Amir Maalaoui</a></h1>
               <div class="social-links mt-3 text-center">
                 <a href="https://twitter.com/AmirMaalaou" class="twitter"><i class="bx bxl-twitter"></i></a>
