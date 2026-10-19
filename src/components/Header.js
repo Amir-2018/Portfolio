@@ -1,41 +1,37 @@
-import portfolio_1 from '../assets/img/pef1.jpg'
+import profile from '../assets/img/amir.png';
 
-const Header = () => {
-    return ( 
-    
+const Header = ({ onNavigate }) => (
+  <header id="header">
+    <div className="profile">
+      <img src={profile} alt="Portrait d’Amir Maalaoui" className="img-fluid rounded-circle" />
+      <h1><a href="#hero" onClick={onNavigate}>Amir Maalaoui</a></h1>
+      <p className="profile-title">Ingénieur en génie logiciel</p>
+      <div className="social-links">
+        <a href="https://github.com/Amir-2018" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <i className="bx bxl-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/amir-maalaoui-12b67020a/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <i className="bx bxl-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:amir.maalaoui27@gmail.com" aria-label="Envoyer un e-mail">
+          <i className="bx bx-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
 
-      
-        <header id="header">
+    <nav className="nav-menu" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#hero" onClick={onNavigate}><i className="bx bx-home" aria-hidden="true"></i><span>Accueil</span></a></li>
+        <li><a href="#about" onClick={onNavigate}><i className="bx bx-user" aria-hidden="true"></i><span>À propos</span></a></li>
+        <li><a href="#skills" onClick={onNavigate}><i className="bx bx-code-alt" aria-hidden="true"></i><span>Compétences</span></a></li>
+        <li><a href="#projects" onClick={onNavigate}><i className="bx bx-window-alt" aria-hidden="true"></i><span>Projets</span></a></li>
+        <li><a href="#experience" onClick={onNavigate}><i className="bx bx-briefcase" aria-hidden="true"></i><span>Expérience</span></a></li>
+        <li><a href="#education" onClick={onNavigate}><i className="bx bx-book" aria-hidden="true"></i><span>Formation</span></a></li>
+        <li><a href="#languages" onClick={onNavigate}><i className="bx bx-globe" aria-hidden="true"></i><span>Langues</span></a></li>
+        <li><a href="#contact" onClick={onNavigate}><i className="bx bx-envelope" aria-hidden="true"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </header>
+);
 
-
-          <div class="d-flex flex-column">
-      
-            <div class="profile">
-              <img src="{portfolio_1}" alt="" class="img-fluid rounded-circle"/>
-              <h1 class="text-light"><a href='../../public/index.html'>Amir Maalaoui</a></h1>
-              <div class="social-links mt-3 text-center">
-                <a href="https://www.facebook.com/amir.maalaoui.31" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="https://github.com/Amir-2018" class="google-plus"><i class="bx bxl-github"></i></a>
-                <a href="https://www.linkedin.com/in/amir-maalaoui-12b67020a/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-      
-            <nav id="navbar" class="nav-menu navbar">
-              <ul>
-                <li><a href='#hero' class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-                <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-                <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Skills</span></a></li>
-                <li><a href="#sumarry" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Sumarry</span></a></li>
-                <li><a href="#education" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Education</span></a></li>
-                <li><a href="#internship" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Internships</span></a></li>
-                <li><a href="#freelance" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Freelance</span></a></li>
-                <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-     );
-}
- 
 export default Header;

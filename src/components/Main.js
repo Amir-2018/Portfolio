@@ -1,360 +1,319 @@
-import  profile  from "../assets/img/amir.jpg";
-import  html  from "../assets/img/skills/html-5.png";
-import  js  from "../assets/img/skills/java-script.png";
-import  boos  from "../assets/img/skills/bootstrap.png";  
-import  css  from "../assets/img/skills/css-3.png";
-import  nodejs  from "../assets/img/skills/nodejs.png";
-import  science  from "../assets/img/skills/science.png";
-import  physics  from "../assets/img/skills/physics.png";
-import  git  from "../assets/img/skills/git.png";
-import  github  from "../assets/img/skills/github.png";
+const skillGroups = [
+  {
+    title: 'Langages',
+    items: ['Java','PHP', 'JavaScript', 'TypeScript', 'Python', 'Dart', 'C#'],
+  },
+  {
+    title: 'Backend',
+    items: ['Laravel', 'Symfony', 'API REST', 'Node.js', 'Spring Boot', 'Django', 'Next.js'],
+  },
+  {
+    title: 'Frontend',
+    items: ['HTML', 'CSS', 'TailwindCSS', 'Angular', 'Vue.js', 'React'],
+  },
+  {
+    title: 'Bases de données',
+    items: ['MySQL', 'PostgreSQL', 'MongoDB'],
+  },
+  {
+    title: 'DevOps & outils',
+    items: ['Docker', 'Kubernetes', 'Jenkins', 'CI/CD', 'Nginx', 'Linux/Ubuntu', 'Git', 'GitHub', 'GitLab', 'Jira', 'Figma'],
+  },
+  {
+    title: 'Concepts & méthodes',
+    items: ['POO', 'MVC', 'Scrum', 'Azure', 'Flutter', 'React Native'],
+  },
+];
 
+const experiences = [
+  {
+    company: 'Network Technologies Tunisia',
+    role: 'Développeur Backend / Full-Stack',
+    date: 'Mars 2025 — Aujourd’hui',
+    location: 'Ariana, Tunisie',
+    details: [
+      'Conception, développement et intégration d’API REST.',
+      'Développement et optimisation d’une plateforme de suivi de flotte en temps réel.',
+      'Intégration et traitement de flux de données issus de dispositifs de géolocalisation de véhicules.',
+      'Amélioration du reporting et des notifications, et création de tableaux de bord.',
+      'Maintenance des applications, support technique et correction de bugs.',
+    ],
+    technologies: 'Node.js, Spring Boot, Angular, Next.js, MongoDB, OpenStreetMap, Docker, Kubernetes, Jenkins, GitLab, Jira',
+  },
+  {
+    company: 'Quetratech',
+    role: 'Développeur Backend / Full-Stack',
+    date: 'Juil. 2024 — Fév. 2025',
+    location: 'Mahdia, Tunisie',
+    details: [
+      'Analyse des besoins et conception technique.',
+      'Conception, développement et intégration d’API REST.',
+      'Développement de fonctionnalités pour des applications web et mobiles.',
+      'Maintenance, tests et correction de bugs.',
+    ],
+    technologies: 'Spring Boot, Angular, TailwindCSS, PostgreSQL, GitLab, Flutter',
+  },
+  {
+    company: 'Actia Engineering Services',
+    role: 'Stagiaire — Projet de fin d’études',
+    date: 'Fév. 2024 — Juil. 2024',
+    location: 'Sfax, Tunisie',
+    details: ['Développement de l’application mobile Chotrana Smart Village.'],
+    technologies: 'Flutter, Django, Angular, TailwindCSS, MongoDB, API REST, Jira',
+  },
+  {
+    company: 'Quetratech',
+    role: 'Stage d’été',
+    date: 'Juil. 2022 — Août 2022',
+    location: 'Mahdia, Tunisie',
+    details: ['Développement d’une application web de gestion des publications, réservations et commandes.'],
+    technologies: 'Spring Boot, Angular, PostgreSQL, API REST',
+  },
+  {
+    company: 'Fablab Mahdia',
+    role: 'Stagiaire — Projet de fin d’études',
+    date: 'Avr. 2021 — Juil. 2021',
+    location: 'Mahdia, Tunisie',
+    details: ['Développement logiciel d’un robot éducatif avec intégration de l’API Blockly.'],
+    technologies: 'Blockly, Node.js, Vue.js, TailwindCSS, PostgreSQL, API REST',
+  },
+];
 
+const education = [
+  {
+    school: 'Institut Supérieur d’Informatique et de Multimédia de Sfax',
+    degree: 'Ingénierie en Génie Logiciel',
+    date: 'Juil. 2024',
+  },
+  {
+    school: 'Institut Supérieur d’Informatique de Mahdia',
+    degree: 'Licence en Informatique',
+    date: 'Juil. 2021',
+  },
+  {
+    school: 'Lycée 15 Octobre, Sejnane',
+    degree: 'Diplôme du Baccalauréat',
+    date: 'Juin 2018',
+  },
+];
 
+const projects = [
+  {
+    title: 'Blockly — Apprendre à programmer',
+    category: 'Éducation',
+    description: 'Application ludique pour initier les enfants à la programmation grâce à des blocs visuels.',
+    url: 'https://blockly-project.onrender.com/',
+    linkLabel: 'Découvrir le projet',
+  },
+  {
+    title: 'Jeu de QCM',
+    category: 'Centre de formation',
+    description: 'Jeu de questions à choix multiples conçu pour un centre de formation.',
+    url: 'https://deutcsh.onrender.com/',
+    linkLabel: 'Découvrir le projet',
+  },
+  {
+    title: 'Gestion des déchets',
+    category: 'Projet professionnel',
+    description: 'Projet professionnel autour de la gestion des déchets.',
+  },
+  {
+    title: 'NGI GPS',
+    category: 'Projet professionnel',
+    description: 'Plateforme professionnelle de suivi et de gestion de flotte par GPS.',
+    url: 'https://app.ngi-gps.com/#!/login',
+    linkLabel: 'Accéder à la plateforme',
+  },
+  {
+    title: 'Réclamations clients',
+    category: 'Projet professionnel',
+    description: 'Plateforme de gestion des réclamations clients développée dans le cadre de mon expérience en entreprise.',
+  },
+];
 
+const Main = ({ onMenuToggle }) => (
+  <>
+    <button
+      type="button"
+      className="mobile-nav-toggle d-xl-none"
+      aria-label="Ouvrir ou fermer le menu"
+      onClick={onMenuToggle}
+    >
+      <i className="bi bi-list" aria-hidden="true"></i>
+    </button>
 
-function fn(){
-  document.querySelector("#header").classList.toggle("animm") ; 
-  
-}
-const Main = () => {
-    return ( 
-        <div>
-        <i class="bi bi-list mobile-nav-toggle d-xl-none" onClick={fn}></i>
-
-            <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-                    <div class="hero-container" >
-                        <h1>Amir Maalaoui</h1>
-                        <p>I'm <span >Software engeneer</span></p>
-                     </div>
-            </section>
-
-            <main id="main">
-                <section id="about" class="about">
-                    <div class="container">
-
-                        <div class="section-title">
-                        <h2>About</h2>
-                        <p>I'm Amir Maalaoui, a 24-year-old highly motivated and skilled software engineering student with a proven track record in full-stack development. With proficiency in front-end languages such as HTML/CSS, JavaScript, and React, as well as back-end frameworks such as Node.js, MongoDB, and Express, I'm equipped to handle a wide range of software development projects. My passion for technology and programming, combined with exceptional problem-solving abilities, make me a valuable addition to any team.</p>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-4" >
-                            <img src={profile} class="img-fluid" alt=""/>
-                        </div>
-                        <div class="col-lg-8 pt-4 pt-lg-0 content" >
-                            <h3>Software engeneer &amp; Web Developer.</h3>
-                            <p >
-                           PERSONAL INFROMATIONS
-                            </p>
-                            <div class="row">
-                            <div class="col-lg-6">
-                                <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>23 January 1999</span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+216 93 379 344 </span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Country:</strong> <span>Tunisia</span></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Engeneer</span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>amir.maalaoui270@gmail.com</span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                                </ul>
-                            </div>
-                            </div>
-                           
-                        </div>
-                        </div>
-
-                    </div>
-                </section>
-                
-
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-        
-        </div>
-
-        <div class="row skills-content d-flex justify-content-center ">
-
-          <div class="col-lg-3 " >
-
-            <div class="progress">
-             <div className="skill">
-                <img src={html} alt="HTML"></img>
-             </div>
-            </div>
-
-            <div class="progress">
-            <div className="skill">
-                <img src={js} alt="HTML"></img>
-             </div>
-            </div>
-
-            <div class="progress">
-            <div className="skill">
-                <img src={boos} alt="HTML"></img>
-             </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-3" >
-
-            <div class="progress">
-            <div className="skill">
-                <img src={css} alt="HTML"></img>
-             </div>
-            </div>
-
-            <div class="progress">
-            <div className="skill">
-                <img src={nodejs} alt="HTML"></img>
-             </div>
-            </div>
-
-            <div class="progress">
-            <div className="skill">
-                <img src={science} alt="HTML"></img>
-             </div>
-            </div>
-
-          </div>
-            <div class="col-lg-3" >
-
-              <div class="progress">
-              <div className="skill">
-                <img src={physics} alt="HTML"></img>
-             </div>
-              </div>
-
-              <div class="progress">
-              <div className="skill">
-                <img src={git} alt="HTML"></img>
-             </div>
-              </div>
-
-              <div class="progress">
-              <div className="skill">
-                <img src={github} alt="HTML"></img>
-             </div>
-              </div>
-
-          </div>
+    <main id="main">
+      <section id="hero" className="hero-section">
+        <div className="hero-content">
+          <p className="eyebrow">Portfolio — Tunisie</p>
+          <h1>Amir Maalaoui</h1>
+          <p className="hero-role">Ingénieur en génie logiciel</p>
+          <p className="hero-description">
+            Développeur backend et full-stack, spécialisé en API REST et applications web.
           
-
+          </p>
+          <a className="primary-button" href="#projects">
+            Découvrir mes projets <i className="bi bi-arrow-down-right" aria-hidden="true"></i>
+          </a>
         </div>
-
-      </div>
-    </section>
-
-    <section id="sumarry" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Sumarry</h2>
+        <div className="hero-decoration" aria-hidden="true">
+          <span>&lt;</span>
+          <span>/&gt;</span>
         </div>
+      </section>
 
-        <div class="row">
-          <div class="col-lg-6" >
-            <div class="resume-item pb-0">
-              <h4>Amir Maalaoui</h4>
-              <p><em>Innovative and deadline-driven Web Developper with 4 years of experience  developing websites and mobile applications.</em></p>
-              <ul>
-                <li>Tunisia Bizerte</li>
-                <li>(+216) 93 379 344</li>
-                <li>amir.maalaoui207@gmail.com</li>
-              </ul>
-            </div>
-
-            <div class="section-title" id="education">
-             <h2>Education</h2>
-            </div>
-            <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2018 - 2019</h5>
-              {/* <p><em> Baccalaureate in Experimental Science</em></p> */}
-            </div>
-
-
-            <div class="resume-item">
-              <h4>Bachelor of Science in Computer Science - Fundamental License</h4>
-              <h5>2021 - 2022</h5>
-              {/* <p><em>1st year fundamental license in computer science (LFI)</em></p> */}
-            </div>
-
-            <div class="resume-item">
-              <h4>studying as a student in software engineering</h4>
-              <h5>2022 - 2023</h5>
-            </div>
-
-      
-
-            {/* <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2022 - 2023</h5>
-              <p><em>computer engineering in web and multimedia technology</em></p>
-            </div> */}
-
-            {/* <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2023 - 2024</h5>
-              <p><em>software engineering</em></p>
-            </div> */}
+      <section id="about" className="portfolio-section about-section">
+        <div className="content-container">
+          <div className="section-heading">
+            <p className="eyebrow">Qui suis-je ?</p>
+            <h2>À propos</h2>
           </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
+          <div className="about-card">
+            <div className="about-mark" aria-hidden="true">AM</div>
+            <div>
+              <h3>Développeur Backend / Full-Stack</h3>
+              <p>
+                Ingénieur en génie logiciel avec plus de deux ans d’expérience en
+                développement backend et full-stack. J’ai travaillé sur la conception
+                d’API REST, des applications web et le traitement de données en temps
+                réel..
+              </p>
+              <div className="contact-details">
+                <a href="tel:+21693379344"><i className="bi bi-telephone" aria-hidden="true"></i> +216 93 379 344</a>
+                <a href="mailto:amir.maalaoui27@gmail.com"><i className="bi bi-envelope" aria-hidden="true"></i> amir.maalaoui27@gmail.com</a>
+                <span><i className="bi bi-geo-alt" aria-hidden="true"></i> Manouba, Tunisie</span>
+                <a href="https://www.linkedin.com/in/amir-maalaoui-12b67020a/" target="_blank" rel="noreferrer">
+                  <i className="bi bi-linkedin" aria-hidden="true"></i> LinkedIn
+                </a>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="section-title " id="internship">
-          <h2>Internships</h2>
-        </div>
-        
-            <div class="col-lg-6" >
-                
-                <div class="resume-item">
-                <h4>educational robot to teach programming to young children</h4>
-                <h3>Fablab</h3>
-                <h5>2021 - Present</h5>
-                
-                <p>This project is being carried out in collaboration with a hardware team to develop a product in the form of an educational robot that allows children to learn programming by manipulating blocks to create a program that will be executed by the robot.</p>
+      <section id="skills" className="portfolio-section skills-section">
+        <div className="content-container">
+          <div className="section-heading">
+            <p className="eyebrow">Technologies & méthodes</p>
+            <h2>Compétences</h2>
+          </div>
+          <div className="skills-grid">
+            {skillGroups.map((group) => (
+              <article className="skill-card" key={group.title}>
+                <h3>{group.title}</h3>
+                <div className="skill-tags">
+                  {group.items.map((item) => <span key={item}>{item}</span>)}
                 </div>
-                <div class="resume-item">
-                <h4>project for the creation and management of restaurants</h4>
-                <h5>2022 - Present</h5>
-                <h3>Quadratech</h3>
-                
-                <p>
-                The purpose of this project is to enable restaurant owners to create an account and establish their own restaurant, which will be visible online. Additionally, the project provides a dashboard where restaurant owners can view various statistics related to their restaurant's performance."
-                </p>
-                
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="portfolio-section projects-section">
+        <div className="content-container">
+          <div className="section-heading">
+            <p className="eyebrow">Réalisations sélectionnées</p>
+            <h2>Projets</h2>
+          </div>
+          <div className="projects-grid">
+            {projects.map((project) => (
+              <article className="project-card" key={project.title}>
+                <div className="project-card-top">
+                  <span className="project-category">{project.category}</span>
+                  <i className="bi bi-code-slash" aria-hidden="true"></i>
                 </div>
-            </div>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                {project.url ? (
+                  <a href={project.url} target="_blank" rel="noreferrer" className="project-link">
+                    {project.linkLabel} <i className="bi bi-arrow-up-right" aria-hidden="true"></i>
+                  </a>
+                ) : (
+                  <span className="project-link project-link-unavailable">Projet réalisé en entreprise</span>
+                )}
+              </article>
+            ))}
+          </div>
         </div>
-        
+      </section>
 
-        
-        
-
- </section>
-
- <section id="sumarry" class="resume">
-      <div class="container">
-
-     
-
-      
-
-        <div class="section-title " id="freelance">
-          <h2>Freealance</h2>
-        </div>
-        
-            <div class="col-lg-6" >
-                
-                <div class="resume-item">
-                <h4>Store Manager</h4>
-                <h3>Quadratech</h3>
-                <h5>2022</h5>
-                
-                <p>Store Manager is a tool that enables store owners to create and manage their stores and counters. The platform allows for geographic tracking of stores and counters, providing valuable insights and statistics for counters</p>                              </div>
-                <div class="resume-item">
-                <h4>Online doctore (PFE)</h4>
-                <h5>2022</h5>
-                <h3>Student</h3>
-                
-                <p>
-                        Our online doctor-finding project is designed to simplify the process of connecting patients with healthcare providers. With our platform, patients can easily search for and book appointments with doctors based on their specialties, ratings, and availability              
-                    </p> 
-                
+      <section id="experience" className="portfolio-section experience-section">
+        <div className="content-container">
+          <div className="section-heading">
+            <p className="eyebrow">Expérience professionnelle</p>
+            <h2>Mon parcours</h2>
+          </div>
+          <div className="timeline">
+            {experiences.map((experience) => (
+              <article className="timeline-item" key={`${experience.company}-${experience.date}`}>
+                <div className="timeline-date">{experience.date}</div>
+                <div className="timeline-card">
+                  <div className="timeline-card-heading">
+                    <div>
+                      <h3>{experience.company}</h3>
+                      <p>{experience.role} <span>· {experience.location}</span></p>
+                    </div>
+                    <i className="bi bi-arrow-up-right" aria-hidden="true"></i>
+                  </div>
+                  <ul>
+                    {experience.details.map((detail) => <li key={detail}>{detail}</li>)}
+                  </ul>
+                  <p className="technology-list"><strong>Technologies :</strong> {experience.technologies}</p>
                 </div>
-
-                <div class="resume-item">
-                <h4>Library management</h4>
-                <h5>2023</h5>
-                <h3>ISIMS</h3>
-                
-                <p>
-                This project aims to manage the library of ISIMS University, by facilitating the borrowing of books by students and overseeing the entire process until the books are returned. The system will keep track of which books are available, which students have borrowed them, and when they are due to be returned.                </p> 
-                </div>
-            </div>
+              </article>
+            ))}
+          </div>
         </div>
-        
+      </section>
 
-        
-        
-
- </section>
- 
- 
-
-    <section id="contact" class="contact">
-        <div class="container">
-        <div class="section-title">
-          <h2>Contact</h2>
+      <section id="education" className="portfolio-section education-section">
+        <div className="content-container">
+          <div className="section-heading">
+            <p className="eyebrow">Formation académique</p>
+            <h2>Études</h2>
+          </div>
+          <div className="education-grid">
+            {education.map((item) => (
+              <article className="education-card" key={item.school}>
+                <span className="education-date">{item.date}</span>
+                <h3>{item.degree}</h3>
+                <p>{item.school}</p>
+              </article>
+            ))}
+          </div>
         </div>
+      </section>
 
-        <div class="col-lg-8  col-md-12" >
-        <div className="container">
-      <form>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input type="text" className="form-control" id="name" />
+      <section id="languages" className="portfolio-section languages-section">
+        <div className="content-container languages-content">
+          <div className="section-heading">
+            <p className="eyebrow">Communication</p>
+            <h2>Langues</h2>
+          </div>
+          <div className="language-list">
+            <span><strong>Arabe</strong> Langue maternelle</span>
+            <span><strong>Français</strong> Avancé</span>
+            <span><strong>Anglais</strong> Intermédiaire</span>
+            <span><strong>Allemand</strong> Débutant</span>
+          </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email address</label>
-          <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
-          <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-       
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
-          <textarea className="form-control" id="message" rows="3"></textarea>
-        </div>
-        <button type="submit" className="btn btn-success">Submit</button>
-      </form>
-    </div>
-        </div>
-    </div>
+      </section>
 
-    
-
-  
- </section>
-
-   
-            </main>
+      <footer id="contact" className="portfolio-footer">
+        <div className="content-container footer-content">
+          <div>
+            <p className="eyebrow">Une opportunité en tête ?</p>
+            <h2>Parlons de votre projet.</h2>
+          </div>
+          <a className="primary-button" href="mailto:amir.maalaoui27@gmail.com">
+            Me contacter <i className="bi bi-arrow-up-right" aria-hidden="true"></i>
+          </a>
+          <p className="footer-note">© {new Date().getFullYear()} Amir Maalaoui</p>
         </div>
-        
-     );
-}
- 
+      </footer>
+    </main>
+  </>
+);
+
 export default Main;
