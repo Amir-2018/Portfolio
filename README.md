@@ -68,3 +68,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Déploiement avec Docker
+
+Construire l’image depuis la racine du projet :
+
+```sh
+docker build -t portfolio .
+```
+
+Lancer le conteneur :
+
+```sh
+docker run --rm -p 8080:80 portfolio
+```
+
+Le site sera disponible sur [http://localhost:8080](http://localhost:8080).
+L’image compile l’application dans une étape Node.js, puis sert les fichiers
+statiques avec Nginx. La configuration Nginx redirige les routes React vers
+`index.html`.

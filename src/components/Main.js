@@ -99,6 +99,20 @@ const education = [
 
 const projects = [
   {
+    title: 'Site e-commerce — Ouou Accessoires',
+    category: 'E-commerce',
+    description: 'Site e-commerce dédié à la présentation et à la vente d’accessoires.',
+    url: 'https://accessoires-front-2.onrender.com/',
+    linkLabel: 'Découvrir le projet',
+  },
+  {
+    title: 'Correction de livres d’allemand via QR code',
+    category: 'Éducation',
+    description: 'Projet de correction de livres d’allemand accessible à partir d’un QR code.',
+    url: 'https://apprentissage-bzpk.onrender.com/',
+    linkLabel: 'Découvrir le projet',
+  },
+  {
     title: 'Blockly — Apprendre à programmer',
     category: 'Éducation',
     description: 'Application ludique pour initier les enfants à la programmation grâce à des blocs visuels.',
